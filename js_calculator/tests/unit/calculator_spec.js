@@ -36,8 +36,9 @@ describe('calculator', function () {
     assert.equal(0, calculator.runningTotal)
   })
 
-  xit('it can divide', function(){
-    assert.equal(true, true)
+  it('it can divide', function(){
+    calculator.divide(7)
+    assert.equal(0, calculator.runningTotal)
   })
 
   xit('it can number click', function(){
