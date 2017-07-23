@@ -41,8 +41,9 @@ describe('calculator', function () {
     assert.equal(0, calculator.runningTotal)
   })
 
-  xit('it can number click', function(){
-    assert.equal(true, true)
+  it('it can number click', function(){
+    calculator.numberClick(4)
+    assert.equal(4, calculator.runningTotal)
   })
 
   xit('it can click operator', function(){
