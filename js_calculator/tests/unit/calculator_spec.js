@@ -60,8 +60,19 @@ describe('calculator', function () {
     assert.equal(6, calculator.runningTotal)
   })
 
-  xit('it can clear', function(){
-    assert.equal(true, true)
+  it('it can clear', function(){
+    calculator.numberClick(4)
+    calculator.operatorClick('+')
+    calculator.numberClick(4)
+    calculator.operatorClick('-')
+    calculator.numberClick(2)
+    calculator.operatorClick('*')
+    calculator.numberClick(2)
+    calculator.operatorClick('/')
+    calculator.numberClick(2)
+    calculator.operatorClick('=')
+    calculator.clearClick()
+    assert.equal(0, calculator.runningTotal)
   })
 
 
