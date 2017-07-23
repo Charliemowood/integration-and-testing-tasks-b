@@ -31,11 +31,12 @@ describe('calculator', function () {
     assert.equal(-7, calculator.runningTotal)
   })
 
-  xit('it can multiply', function(){
-    assert.equal(true, true)
+  it('it can multiply', function(){
+    calculator.multiply(12)
+    assert.equal(0, calculator.runningTotal)
   })
 
-  xit('it can devide', function(){
+  xit('it can divide', function(){
     assert.equal(true, true)
   })
 
