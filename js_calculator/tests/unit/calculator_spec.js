@@ -21,10 +21,9 @@ describe('calculator', function () {
     assert.equal(7, calculator.runningTotal)
   })
 
-
-
-  xit('it can subtract', function(){
-    assert.equal(true, true)
+  it('it can subtract 10', function(){
+    calculator.subtract(10)
+    assert.equal(-10, calculator.runningTotal)
   })
 
   xit('it can multiply', function(){
