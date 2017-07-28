@@ -22,21 +22,47 @@ describe('calculator functionality', function() {
     expect(running_total.getAttribute('value')).to.eventually.equal('3')
   })
 
-  it('should have working number buttons, testing muliple buttons', function(){
+  it('should have working number buttons, testing multiple buttons', function(){
     running_total = element(by.css('#running_total'))
     element(by.css('#number3')).click();
     element(by.css('#number3')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('33')
   })
 
-
   it('should be able to update display after multiplication', function(){
     running_total = element(by.css('#running_total'))
-    element(by.css('#number2')).click();
+    element(by.css('#number4')).click();
     element(by.css('#operator_multiply')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('8')
+  })
+
+  it('should be able to update display after division', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number4')).click();
+    element(by.css('#operator_divide')).click();
+    element(by.css('#number2')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('2')
+  })
+
+  it('should be able to update display after addition', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number3')).click();
+    element(by.css('#operator_add')).click();
     element(by.css('#number3')).click();
     element(by.css('#operator_equals')).click();
     expect(running_total.getAttribute('value')).to.eventually.equal('6')
+  })
+
+  it('should be able to update display after subtraction', function(){
+    running_total = element(by.css('#running_total'))
+    element(by.css('#number5')).click();
+    element(by.css('#operator_subtract')).click();
+    element(by.css('#number3')).click();
+    element(by.css('#operator_equals')).click();
+    expect(running_total.getAttribute('value')).to.eventually.equal('2')
   })
 
 
